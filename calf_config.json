@@ -1,0 +1,48 @@
+{
+  "base": "/content/drive/MyDrive/CALF",
+  "data_path": "/content/drive/MyDrive/CALF/data/processed_dataset.pkl",
+  "dag_path": "/content/drive/MyDrive/CALF/graphs/causal_dag.pkl",
+  "results_path": "/content/drive/MyDrive/CALF/results/all_metrics.csv",
+  "figures_path": "/content/drive/MyDrive/CALF/figures/",
+  "model_path": "/content/drive/MyDrive/CALF/calf_model/",
+  "dataset": "NLSY97",
+  "test_size": 0.2,
+  "val_size": 0.1,
+  "random_seed": 42,
+  "roots_vars": [
+    "income_1997",
+    "parent_edu",
+    "family_size"
+  ],
+  "soil_vars": [
+    "school_quality",
+    "teacher_ratio",
+    "public_private"
+  ],
+  "leaves_vars": [
+    "peer_college_rate",
+    "peer_employment",
+    "social_score"
+  ],
+  "choice_vars": [
+    "college_attend",
+    "training_program",
+    "job_search"
+  ],
+  "outcome_var": "income_2019",
+  "hidden_dim": 128,
+  "num_layers": 4,
+  "dropout": 0.3,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "batch_size": 64,
+  "total_epochs": 200,
+  "save_every": 10,
+  "metrics": [
+    "PEHE",
+    "ATE_error",
+    "policy_value",
+    "fairness_gap"
+  ],
+  "dpi": 300
+}

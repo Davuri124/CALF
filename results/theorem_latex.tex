@@ -1,0 +1,32 @@
+
+\begin{theorem}[CALF Identification]
+\label{thm:identification}
+Let $\mathcal{X} = (\mathcal{R}, \mathcal{S}, \mathcal{L}, \mathcal{C})$ denote the
+tree-structured covariate space of Roots, Soil, Leaves, and Choice respectively.
+Under the following assumptions:
+\begin{enumerate}[label=\textbf{A\arabic*}]
+    \item \textbf{Consistency (SUTVA):} $Y_i = Y_i(T_i)$ for all $i$
+    \item \textbf{Strong Ignorability:}
+          $\{Y(0), Y(1)\} \perp T \mid (\mathcal{R}, \mathcal{S}, \mathcal{L})$
+    \item \textbf{Overlap:} $0 < \mathbb{P}(T=1 \mid \mathcal{X}) < 1$ for all $\mathcal{X}$
+    \item \textbf{Model Consistency:} The CALF encoder $f_\theta$ is a
+          universal approximator on compact subsets of $\mathcal{X}$
+\end{enumerate}
+the Individual Treatment Effect $\tau_i = Y_i(1) - Y_i(0)$ is nonparametrically
+identified from the observational distribution $\mathbb{P}(Y, T, \mathcal{X})$ via
+the backdoor adjustment formula, and the CALF estimator $\hat{\tau}_i$ is
+consistent as $n \to \infty$.
+\end{theorem}
+
+\begin{proof}[Proof Sketch]
+By A2 (strong ignorability), the potential outcomes are independent of treatment
+given the observed pre-treatment covariates $(\mathcal{R}, \mathcal{S}, \mathcal{L})$.
+Combined with A3 (overlap), the ATE is identified by the backdoor formula
+$\tau = \mathbb{E}[\mathbb{E}[Y \mid T=1, \mathcal{X}] - \mathbb{E}[Y \mid T=0, \mathcal{X}]]$.
+By A4, CALF's tree-structured encoder with multi-head cross-layer attention
+is a universal approximator, guaranteeing that the potential outcome functions
+$\mu_t(\mathcal{X}) = \mathbb{E}[Y(t) \mid \mathcal{X}]$ can be approximated
+arbitrarily well for $t \in \{0, 1\}$ as model capacity increases.
+Consistency of $\hat{\tau}_i$ follows from consistency of the potential outcome
+estimators $\hat{\mu}_0$ and $\hat{\mu}_1$ under A1--A4. $\square$
+\end{proof}

@@ -1,0 +1,19 @@
+Dataset,Model,Accuracy,Precision,Recall,F1,ROC-AUC
+Heart Disease,Logistic Regression,85.8,85.5,89.1,87.2,0.914
+Heart Disease,Random Forest,83.5,83.2,87.3,85.2,0.908
+Heart Disease,HistGradientBoosting (ours),80.9,82.4,82.4,82.4,0.876
+Diabetes,Logistic Regression,74.7,61.7,72.8,66.8,0.835
+Diabetes,Random Forest,76.2,68.2,59.3,63.5,0.822
+Diabetes,HistGradientBoosting (ours),74.9,63.1,67.5,65.2,0.8
+Stroke,Logistic Regression,74.0,13.5,79.9,23.0,0.837
+Stroke,Random Forest,94.9,7.1,0.4,0.8,0.796
+Stroke,HistGradientBoosting (ours),89.9,19.7,34.9,25.2,0.81
+Insurance,Logistic Regression,82.9,61.9,80.2,69.8,0.859
+Insurance,Random Forest,76.5,54.7,28.3,37.3,0.84
+Insurance,HistGradientBoosting (ours),83.4,65.1,70.9,67.8,0.856
+Breast Cancer,Logistic Regression,97.2,97.5,98.0,97.8,0.994
+Breast Cancer,Random Forest,96.1,96.7,97.2,96.9,0.989
+Breast Cancer,HistGradientBoosting (ours),96.7,96.4,98.3,97.4,0.992
+CKD,Logistic Regression,98.8,100.0,98.0,99.0,1.0
+CKD,Random Forest,99.2,99.2,99.6,99.4,1.0
+CKD,HistGradientBoosting (ours),99.8,100.0,99.6,99.8,1.0

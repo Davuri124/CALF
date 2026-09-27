@@ -1,0 +1,16 @@
+{
+  "phase1_data_preprocessing": "2026-05-13 09:13:24",
+  "phase2_causal_dag": "2026-05-13 09:31:50",
+  "phase3_baselines": "2026-05-13 09:49:45",
+  "phase4_calf_training": "2026-05-13 15:10:15",
+  "phase5_ablation": "2026-05-14 04:10:04",
+  "phase6_paper_plots": "2026-05-14 05:02:29",
+  "phase7_theory_sensitivity": "2026-05-14 08:59:40",
+  "phase8_benchmarks": "2026-05-15 03:58:49",
+  "phase8_transfer_ihdp": "2026-05-15 04:15:21",
+  "phase9_uncertainty": "2026-05-19 06:53:10",
+  "phase10_policy_learning": "2026-05-19 10:22:50",
+  "phase11_interpretability": "2026-05-20 03:45:19",
+  "phase12_robustness": "2026-05-20 11:08:00",
+  "all_fixes_complete": "2026-05-25 05:23:02"
+}
